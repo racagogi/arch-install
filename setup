@@ -1,0 +1,32 @@
+cp ./config/grub /etc/default
+cp ./config/locale.gen /etc
+cp ./config/logind.conf /etc/systemd
+cp ./config/main.conf /etc/bluetooth/
+cp ./config/mirrorlist /etc/pacman.d/
+cp ./config/environment /etc/environment
+cp ./config/lightdm.conf /etc/lightdm/
+cp ./config/lightdm-webkit2-greeter.conf /etc/lightdm/
+cp ./image/gretter.png /usr/share/backgrounds/
+cp -r ./fonts/* /usr/share/fonts/
+cp ./config/xorg.conf /etc/X11
+cp ./config/x /etc/X11
+cp -r ./config/xsessions /usr/share
+cp ./config/raca /home/raca/
+cp ./image/desktop.jpg /home/raca/
+cp ./image/background.jpg /home/raca/
+cp ./config/racacond /home/raca/
+cp -r /mount/01uinput.rules
+locale-gen
+echo LANG=en_US.UTF-8 > /etc/locale.conf
+echo Arch > /etc/hostname
+systemctl enable NetworkManager
+ln -sf /usr/bin/nvim /usr/bin/vim
+ln -sf /usr/bin/nvim /usr/bin/vi
+timedatectl set-ntp true
+timedatectl set-local-rtc 1 --adjust-system-clock
+ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+useradd -m -g users -G wheel -s /bin/zsh raca
+groupadd uinput
+usermod -aG input raca
+usermod -aG uinput raca
+modprobe uinput

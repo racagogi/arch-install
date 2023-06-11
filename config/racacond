@@ -1,0 +1,5 @@
+[User]
+Session=
+XSession=xmonad
+Icon=/var/lib/AccountsService/icons/raca
+SystemAccount=false
