@@ -18,7 +18,7 @@ ln -sf /usr/bin/nvim /usr/bin/vi
 echo raca-arch > /etc/hostname
 systemctl enable NetworkManager
 
-cp -r /mount/01uinput.rules
+cp -r ./config/01uinput.rules /etc/udev/rules.d/
 groupadd uinput
 usermod -aG input raca
 usermod -aG uinput raca
