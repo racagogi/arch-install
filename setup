@@ -22,3 +22,6 @@ cp -r ./config/01uinput.rules /etc/udev/rules.d/
 groupadd uinput
 usermod -aG input raca
 usermod -aG uinput raca
+
+grub-install --efi-directory=/boot/efi --modules="tpm" --disable-shim-lock
+grub-mkconfig -o /boot/grub/grub.cfg
