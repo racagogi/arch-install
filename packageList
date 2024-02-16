@@ -1,1 +1,1 @@
-pacstrap /mnt alsa-utils base base-devel chezmoi efibootmgr feh fzf git grub ibus-hangul imagemagick lightdm-webkit-theme-litarvan linux linux-firmware neovim networkmanager os-prober picom polybar pulseaudio-alsa rofi vivaldi wezterm xclip xdg-utils xf86-video-amdgpu zsh
+pacstrap /mnt alsa-utils base base-devel linux linux-firmware pulseaudio-alsa xclip xdg-utils xf86-video-amdgpu
